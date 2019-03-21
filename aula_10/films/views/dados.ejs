@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <h1 style="text-align:center"> <%= films[id].title %> </h1>
+        <li><b>id</b>: <%= films[id].id %></li>
+        <li><b>title</b>: <%= films[id].title %></li>
+        <li><b>episode_id</b>: <%= films[id].episode_id %></li>
+        <li><b>opening_crawl</b>: <%= films[id].opening_crawl %></li>
+        <li><b>director</b>: <%= films[id].director %></li>
+        <li><b>producer</b>: <%= films[id].producer %></li>
+        <li><b>release_date</b>: <%= films[id].release_date %></li>
+        <li><b>characters</b>:
+            <ul>
+                <%for(var i = 0; i< films[id].characters.length; i++){%>
+                <li><a href="<%= films[id].characters[i] %>"><%= films[id].characters[i] %></a></li>
+                <%}%>
+            </ul>
+        </li>
+        <li><b>planets</b>:
+            <ul>
+                <%for(var i = 0; i< films[id].planets.length; i++){%>
+                    <li><a href="<%= films[id].planets[i] %>"><%= films[id].planets[i] %></a></li>
+                <%}%>
+            </ul>
+        </li>
+        <li><b>starships</b>:
+            <ul>
+                <%for(var i = 0; i< films[id].starships.length; i++){%>
+                    <li><a href="<%= films[id].starships[i] %>"><%= films[id].starships[i] %></a></li>
+                <%}%>
+            </ul>
+        </li>
+        <li><b>vehicles</b>:
+            <ul>
+                <%for(var i = 0; i< films[id].vehicles.length; i++){%>
+                    <li><a href="<%= films[id].vehicles[i] %>"><%= films[id].vehicles[i] %></a></li>
+                <%}%>
+            </ul>
+        </li>
+        <li><b>species</b>:
+            <ul>
+                <%for(var i = 0; i< films[id].species.length; i++){%>
+                    <li><a href="<%= films[id].species[i] %>"><%= films[id].species[i] %></a></li>
+                <%}%>
+            </ul>
+        </li>
+        <li><b>created</b>: <%= films[id].created %></li>
+        <li><b>edited</b>: <%= films[id].edited %></li>
+        <li><b>url</b>: <%= films[id].url %></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    
+
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <th scope="col">ID</th>
+            <th style="width: 10%" scope="col">TITLE</th>
+            <th scope="col">EPISODE_ID</th>
+            <th scope="col">OPENING_CRAWL</th>
+            <th scope="col">DIRECTOR</th>
+            <th style="width: 10%" scope="col">REL</th>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i < films.length ; i++){ %>
+
+            <tr title="Vizualizar informações sobre: <%= films[i].title %> "  onclick="location.href = '/films/<%= i %>';" style="cursor: pointer;">
+                <td scope="row"> <%= films[i].id %> </td>
+                <td scope="row"> <%= films[i].title %> </td>
+                <td scope="row"> <%= films[i].episode_id %> </td>
+                <td scope="row"> <%= films[i].opening_crawl %> </td>
+                <td scope="row"> <%= films[i].director %> </td>
+                <td scope="row"> <%= films[i].release_date %></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
